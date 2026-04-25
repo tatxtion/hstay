@@ -1,0 +1,23 @@
+{
+  "name": "hstay",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "version": "0.1.0",
+  "description": "Turbo-powered root workflow for the hstay frontend and backend submodules.",
+  "workspaces": [
+    "apps/backend",
+    "apps/frontend"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test:ci",
+    "lint": "turbo run lint --filter=hstay-frontend",
+    "check": "turbo run check --filter=hstay-frontend",
+    "clean": "turbo run clean && rm -rf .turbo node_modules",
+    "submodule:update": "git submodule update --init --recursive --remote"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0"
+  }
+}
