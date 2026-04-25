@@ -6,7 +6,8 @@
   "description": "Turbo-powered root workflow for the hstay frontend and backend submodules.",
   "workspaces": [
     "apps/backend",
-    "apps/frontend"
+    "apps/frontend",
+    "apps/ai"
   ],
   "scripts": {
     "dev": "turbo run dev",
